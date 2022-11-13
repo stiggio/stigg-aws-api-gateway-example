@@ -1,0 +1,37 @@
+// -----------------
+// This is a http client file format of JetBrains (https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html)
+// It's used to quickly run requests to test the deployed test application
+// -----------------
+
+// collaborators REST endpoints
+
+###
+POST {{api-gateway-url}}/api/collaborators/
+Authorization: Bearer {{customerId}}
+
+###
+DELETE {{api-gateway-url}}/api/collaborators/example-id/test@gmail.com
+Authorization: Bearer {{customerId}}
+
+###
+POST {{api-gateway-url}}/api/collaborators/add-seats
+Authorization: Bearer {{customerId}}
+
+
+// todos REST endpoints
+
+###
+GET {{api-gateway-url}}/api/todos/
+Authorization: Bearer {{customerId}}
+
+###
+POST {{api-gateway-url}}/api/todos/
+Authorization: Bearer {{customerId}}
+
+###
+PUT {{api-gateway-url}}/api/todos/example-id
+Authorization: Bearer {{customerId}}
+
+###
+PUT {{api-gateway-url}}/api/todos/example-id
+Authorization: Bearer {{customerId}}

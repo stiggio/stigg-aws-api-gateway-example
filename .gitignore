@@ -1,0 +1,13 @@
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.tfstate.lock.info
+.tfvars
+
+target/
+node_modules/
+
+.idea/
+.vscode/
+
+http-client.private.env.json
