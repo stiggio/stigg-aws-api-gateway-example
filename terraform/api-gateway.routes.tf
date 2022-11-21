@@ -5,17 +5,9 @@ resource "aws_apigatewayv2_integration" "backend-lambda-integration" {
   payload_format_version = "2.0"
 }
 
-resource "aws_apigatewayv2_route" "todos-route" {
+resource "aws_apigatewayv2_route" "api-route" {
   api_id             = aws_apigatewayv2_api.api-gateway.id
-  route_key          = "ANY /api/todos/{proxy+}"
-  target             = "integrations/${aws_apigatewayv2_integration.backend-lambda-integration.id}"
-  authorizer_id      = aws_apigatewayv2_authorizer.authorizer.id
-  authorization_type = "CUSTOM"
-}
-
-resource "aws_apigatewayv2_route" "collaborators-route" {
-  api_id             = aws_apigatewayv2_api.api-gateway.id
-  route_key          = "ANY /api/collaborators/{proxy+}"
+  route_key          = "ANY /api/{proxy+}"
   target             = "integrations/${aws_apigatewayv2_integration.backend-lambda-integration.id}"
   authorizer_id      = aws_apigatewayv2_authorizer.authorizer.id
   authorization_type = "CUSTOM"

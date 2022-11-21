@@ -41,6 +41,8 @@ async function checkRouteEntitlements(method, path, authorization) {
 
     let isAuthorized = true;
 
+    // checking that customer has access to all required entitlements.
+    // note that subsequent checks are evaluated in-memory for the same customer
     for (const entitlementToCheck of route.entitlements) {
         const entitlement = await checkEntitlement(customerId, entitlementToCheck);
         console.debug(`Entitlement response for '${entitlementToCheck.feature.id}'`, entitlement);

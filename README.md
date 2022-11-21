@@ -16,7 +16,7 @@ Read the full article at Stigg [documentation](https://docs.stigg.io/docs/api-ga
 
 ## Deployment
 
-This project can be easily deployed using terraform to be easily check it out.
+This project can be easily deployed using terraform after cloning the repository.
 
 ### Requirements
 
@@ -26,6 +26,10 @@ This project can be easily deployed using terraform to be easily check it out.
 
 ### Setup
 
+* Clone the repository:
+  ```
+  git clone git@github.com:stiggio/stigg-aws-api-gateway-example.git
+  ```
 * Install the `@stigg/node-server-sdk` dependency using yarn:
   ```
   cd node-server-sdk-layer/nodejs/
